@@ -1,0 +1,15 @@
+{
+    "name": "isards-tools",
+    "title": "Isard's Tools",
+    "description": "Random tools and scripts for me, Isard",
+    "version": "0.0.1",
+    "author": "Isard Botha",
+    "scripts": [
+        "./src/main.js"
+    ],
+    "url": "https://github.com/ibotha/isards-tools",
+    "manifest": "https://raw.githubusercontent.com/ibotha/isards-tools/master/module.json",
+    "download": "https://github.com/ibotha/isards-tools/archive/master.zip",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.6"
+}
