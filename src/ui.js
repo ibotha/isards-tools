@@ -18,5 +18,12 @@ Hooks.on("getSceneControlButtons", (controls, b, c) => {
                 },
             }
         ]
+        let isardsToolGroup = {
+            name: "isardsTools",
+            layer: "isards_layer",
+            title: game.i18n.localize("isards_tools.controls.isardsTools.name"),
+            icon: "fas fa-layer-group",
+            tools: isardsTools,
+        }
     }
 });
