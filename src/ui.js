@@ -25,5 +25,6 @@ Hooks.on("getSceneControlButtons", (controls, b, c) => {
             icon: "fas fa-layer-group",
             tools: isardsTools,
         }
+        controls.push(isardsToolGroup);
     }
 });
