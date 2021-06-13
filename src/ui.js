@@ -11,7 +11,7 @@ Hooks.on("getSceneControlButtons", (controls, b, c) => {
             {
                 name: "hi",
                 title: game.i18n.localize("isards_tools.controls.hi.name"),
-                icon: "fas fa-layer-group",
+                icon: "fas fa-hand-spock",
                 button: true,
                 onClick: () => {
                     console.log("Isard's Tools click");
@@ -22,9 +22,17 @@ Hooks.on("getSceneControlButtons", (controls, b, c) => {
             name: "isardsTools",
             layer: "isards_layer",
             title: game.i18n.localize("isards_tools.controls.isardsTools.name"),
-            icon: "fas fa-layer-group",
+            icon: "fas fa-toolbox",
             tools: isardsTools,
         }
         controls.push(isardsToolGroup);
+    }
+});
+
+Hooks.on("ready", () => {
+    if (game.user.isGM) {
+      Hooks.on("renderSceneControls", () => {
+        if (canvas["isards_layer"]) canvas["isards_layer"].deactivate();
+      });
     }
 });
